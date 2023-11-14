@@ -22,45 +22,47 @@
 //rock vs scissors = rock
 //paper vs scissors = scissors
 
-gameRound();
+askPlayAgain();
 
 function gameRound() {
-    console.log("let's play a game:");
+    console.log("Let's play a game:");
     let computer = getComputerChoice();
     let player = getPlayersChoice();
 
     if (player === computer) {
         console.log("it's a tie");
-        alert("It's a tie!" + " " + player + " " + "against" + " " + computer + "!");
+        alert("It's a tie! " + player + " against " + computer + "!");
         askPlayAgain();
-    } else if ((( player === "rock") && (computer === "scissors")) || ((player === "paper") && (computer === "rock")) || ((player === "scissors") && (computer === "paper")) || ((player === "scissors") && (computer === "paper"))) {
-        console.log("you win");
+    } else if ((( player === "ROCK") && (computer === "SCISSORS"))
+    || ((player === "PAPER") && (computer === "ROCK")) 
+    || ((player === "SCISSORS") && (computer === "PAPER"))) {
         console.log("You WIN!");
         alert("You WIN!!! " + "\nCongradulations, " + player + " beats " + computer + "!");
         askPlayAgain();
         return;
     } else {
     console.log("you loose");
-    alert("You Loose! " + "\nBecause " + computer + " beats " + player + ".");
+    alert("You Loose! " + "\nSadly, " + computer + " beats " + player + ".");
+    askPlayAgain();
     return;
     }
 }
 
 
 function getComputerChoice() {
-    const choicesArray = ["rock","paper","scissors"];
+    const choicesArray = ["ROCK","PAPER","SCISSORS"];
     const randomChoice = choicesArray[Math.floor(Math.random()*choicesArray.length)];
     console.log(randomChoice);
     return randomChoice;
 }
 function getPlayersChoice() {
-    const playersChoice = prompt("Rock,Paper or Scissors?","Write down your choice").toLowerCase();
+    const playersChoice = prompt("Rock,Paper or Scissors?","Write down your choice").toUpperCase();
     console.log(playersChoice);
-    if (playersChoice === "rock" || playersChoice === "paper" || playersChoice === "scissors") {
+    if (playersChoice === "ROCK" || playersChoice === "PAPER" || playersChoice === "SCISSORS") {
         return playersChoice;
     }
     else {
-        console.log("unacceptable choice, please choose again.")
+        console.log("Unacceptable choice, please choose again.")
         alert("Something went wrong.\nPlease write down your answer again and make sure to check your spelling.");
         getPlayersChoice();
         return;
@@ -69,7 +71,7 @@ function getPlayersChoice() {
 
 function askPlayAgain() {
     confirm("Would you like to play another round?");
-            if (confirm) {
+        if (confirm === true) {
             console.log("confirmed New Game");
             gameRound();
             return;
