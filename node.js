@@ -7,7 +7,7 @@ let computerScore;
 
 console.log(playGame());
 
-function playGame() { // needs to be changed to a loop once learned
+function playGame() { // CLEAN ME: needs to be changed to a loop once learned
     playerScore = 0;
     computerScore = 0;
     console.log("ROUND 1:");
@@ -33,7 +33,7 @@ function playRound(playerSelection, computerSelection) {
     playerSelection = getPlayerChoice();
     console.log(playerSelection);
     if (playerSelection === false) {
-    return false; //if player presses cancel - needs fixing
+    return false; //if player presses cancel - FIX ME
     }
     else if (playerSelection === computerSelection) {
         return ("It's a tie! " + playerSelection + " against " + computerSelection + "!");
@@ -63,7 +63,7 @@ function getPlayerChoice() {
         if (playerSelection === "Rock" || "Paper" || "Scissors") {
             return playerSelection;
         }
-        else { // this needs debugging, does not get run
+        else { // FIX ME, does not get run
             alert("Please spell check: " + playerInput + "\nPress \"ok\" to re-enter your choice");
             return getPlayerChoice();
         } 
@@ -97,3 +97,5 @@ function isGameOver() { // add once game is looped
 }
 
 // Created by Sanelma Brown, November 16th 2023
+
+        
