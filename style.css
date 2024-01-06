@@ -1,0 +1,82 @@
+/* Style sheet for Rock Paper Scissors */
+
+body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    border: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgb(61, 141, 94), black 50%);
+
+    letter-spacing: 2px;
+}
+.header {
+    width: 100%;
+    background: black;
+    padding: 30px 0px 30px 0px;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    box-shadow: 0px 0px 20px black;
+    z-index: 20;
+}
+.game {
+    min-height: 80%;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    color: white;
+}
+.title {
+    font-size: 30px;
+    margin-top: 40px;
+}
+.subtitle {
+    margin-bottom: 30px;
+}
+.results {
+    font-size: 30px;
+    height: 50px;
+    width: 80%;
+}
+.buttons {
+    height: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.btn {
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btn:hover {
+    text-shadow: 0px 0px 10px white;
+}
+.btn img:hover {
+    -webkit-filter: drop-shadow(0px 0px 20px rgb(191, 253, 192));
+}
+.btn img {
+    height: 80px;
+}
+
+.footer {
+    background: grey;
+    width: 100%;
+    text-align: center;
+}
+.footer span a {
+    color: inherit;
+}
+
