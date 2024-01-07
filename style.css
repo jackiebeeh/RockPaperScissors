@@ -7,7 +7,7 @@ body {
     flex-direction: column;
     border: 0;
     margin: 0;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background: linear-gradient(rgb(61, 141, 94), black 50%);
 
@@ -42,8 +42,9 @@ body {
 }
 .results {
     font-size: 30px;
-    height: 50px;
+    min-height: 50px;
     width: 80%;
+    text-align: center;
 }
 .buttons {
     height: 250px;
@@ -69,6 +70,7 @@ body {
 }
 .btn img {
     height: 80px;
+    margin-bottom: 15px;
 }
 
 .footer {
@@ -79,4 +81,3 @@ body {
 .footer span a {
     color: inherit;
 }
-

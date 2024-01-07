@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RockPaperScissors</title>
     <link rel="stylesheet" href="./style.css"/>
-    <script src="./script.js"></script>
+    
 </head>
 
 <body>
@@ -14,21 +14,24 @@
     <div class="game">
         <div class="title">Let's play</div>
         <div class="subtitle">Start by clicking your option</div>
-        <div class="results"></div>
+        <div class="results">
+            <div class="score"></div>
+            <div class="gameResult"></div>
+        </div>
         <div class="buttons">
-            <div class="rock btn">
+            <div class="rock btn" value="Rock">
                 <div class="icon">
                     <img src="./images/rock.png">
                 </div>
                 Rock
             </div>
-            <div class="paper btn">
+            <div class="paper btn" value="Paper">
                 <div class="icon">
                     <img src="./images/paper.png">
                 </div>
                 Paper
             </div>
-            <div class="scissors btn">
+            <div class="scissors btn" value="Scissors">
                 <div class="icon">
                     <img src="./images/scissors.png">
                 </div>
@@ -37,5 +40,6 @@
         </div>
     </div>
     <div class="footer">Website designed and created by <span><a href="www.github.com/jackiebeeh">Jackie Beeh</a></span></div>
+    <script src="./script.js"></script>
 </body>
 </html>
