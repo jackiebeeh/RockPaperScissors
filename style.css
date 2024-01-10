@@ -1,13 +1,33 @@
 /* Style sheet for Rock Paper Scissors */
+
+/* colors */
+*{
+    --cold-purple-color: #8470ff;
+    --hot-pink-color: #ff1493;
+    --blue-color: #1e90ff;
+    --pink-purple-color: #bf3eff;
+    --white-color: #f8f8f0;
+}
+/* Fonts */
+@font-face {
+    font-family: "2Dumb";
+    src: url(./fonts/2Dumb/2Dumb.woff2);
+}
+@font-face {
+    font-family: "3Dumb";
+    src: url(./fonts/3Dumb/);
+}
+
 * {
     transition: all 0.1s;
 }
 @media (max-height: 560px) {
     body {
         height: 100%;
+        background-color: #ff1493;
     }
     .score {
-        font-size: small;
+        font-size: 0.5em;
     }
 }
 body {
@@ -17,19 +37,22 @@ body {
     flex-direction: column;
     border: 0;
     margin: 0;
-    background: linear-gradient(rgb(61, 141, 94), black 50%);
+    background: linear-gradient(var(--blue-color), var(--cold-purple-color) 50%);
     letter-spacing: 4px;
     height: 100vh;
+    min-height: 555px;
     width: 100%;
+    font-family: "2Dumb",sans-serif;
 }
 .header {
     width: 100%;
     background: black;
+    color: var(--white-color);
     padding: 20px 0px 20px 0px;
     text-align: center;
+    box-shadow: 0px 0px 20px 2px black;
+    font-family:"3Dumb", sans-serif;
     font-size: 2.5em;
-    color: white;
-    box-shadow: 0px 0px 20px black;
 }
 .game {
     height: 100%;
@@ -49,13 +72,14 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    text-align: center;
+    font-size: 1.8em;
 }
 .subtitle {
-    font-size: 16px;
+    margin-top: 10px;
+    font-size: 0.5em;
 }
 .results {
-    font-size: 28px;
     height: 50%;
     min-height: 165px;
     width: 100%;
@@ -64,9 +88,14 @@ body {
     justify-content: flex-start;
     align-items: center;
     text-align: center;
+    font-size: 1.5em;
 }
 .score {
-    margin: 0px 0px 8% 0px;
+    margin: 0px 0px 5% 0px;
+    font-size: 1.5em;
+    background: #bf3eff50;
+    width:100%;
+    padding: 8px 0px 8px 0px;
 }
 .gameResult {
     /* height: 50%; */
@@ -75,14 +104,19 @@ body {
     justify-content: space-between;
     align-items: center;
     width:80%;
+    font-size: 1em;
 }
 .replay-btn {
     position: relative;
     height: 60px;
-    width: 120px;
+    width: 180px;
     margin: 20px;
     font-size: 14px;
     font-weight: 900;
+    background: var(--hot-pink-color);
+    color: white;
+    font-family: "2dumb";
+    font-size: 1em;
 }
 .replay-btn:hover {
     transition: all 0.5s;
@@ -95,6 +129,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    background: #00000030;
 }
 .btn {
     height: 100%;
@@ -121,6 +156,7 @@ body {
     width: 100%;
     text-align: center;
     padding: 10px 0px 10px 0px;
+    font-size: 0.8em;
 }
 .footer span a {
     color: inherit;
