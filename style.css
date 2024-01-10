@@ -1,4 +1,15 @@
 /* Style sheet for Rock Paper Scissors */
+* {
+    transition: all 0.1s;
+}
+@media (max-height: 560px) {
+    body {
+        height: 100%;
+    }
+    .score {
+        font-size: small;
+    }
+}
 body {
     display: flex;
     justify-content: space-between;
@@ -11,11 +22,6 @@ body {
     height: 100vh;
     width: 100%;
 }
-@media (max-height: 600px) {
-    body {
-        height: 100%;
-    }
-}
 .header {
     width: 100%;
     background: black;
@@ -24,11 +30,9 @@ body {
     font-size: 2.5em;
     color: white;
     box-shadow: 0px 0px 20px black;
-    /* z-index: 20; */
 }
 .game {
     height: 100%;
-    /* min-height: 337px; */
     width: 100%;
     display:flex;
     flex-direction: column;
@@ -37,7 +41,7 @@ body {
     color: white;
 }
 .title {
-    margin: 30px 0px 10px 0px;
+    margin: 10px 0px 20px 0px;
     height:20%;
     min-height: 65px;
     width:100%; 
@@ -49,7 +53,6 @@ body {
 }
 .subtitle {
     font-size: 16px;
-    /* margin-bottom: 5%; */
 }
 .results {
     font-size: 28px;
@@ -58,12 +61,12 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
 }
 .score {
-    /* margin: 8% 0px 8% 0px; */
+    margin: 0px 0px 8% 0px;
 }
 .gameResult {
     /* height: 50%; */
@@ -71,6 +74,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    width:80%;
 }
 .replay-btn {
     position: relative;
@@ -81,7 +85,8 @@ body {
     font-weight: 900;
 }
 .replay-btn:hover {
-    box-shadow: 0px 0px 10px white;
+    transition: all 0.5s;
+    box-shadow: 0px 0px 20px white;
 }
 .buttons {
     height: 30%;
@@ -99,12 +104,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* margin-bottom: 20px; */
 }
 .btn:hover {
     text-shadow: 0px 0px 10px white;
 }
 .btn img:hover {
+    transition: all 1s;
     -webkit-filter: drop-shadow(0px 0px 20px rgb(191, 253, 192));
 }
 .btn img {
@@ -115,7 +120,7 @@ body {
     background: grey;
     width: 100%;
     text-align: center;
-    padding: 2% 0px 2% 0px;
+    padding: 10px 0px 10px 0px;
 }
 .footer span a {
     color: inherit;
