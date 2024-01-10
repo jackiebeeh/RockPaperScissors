@@ -21,13 +21,16 @@
 * {
     transition: all 0.1s;
 }
-@media (max-height: 560px) {
+@media (max-height: 550px) {
     body {
         height: 100%;
         background-color: #ff1493;
     }
     .score {
         font-size: 0.5em;
+    }
+    .game {
+        height: 100vh;
     }
 }
 body {
@@ -40,7 +43,7 @@ body {
     background: linear-gradient(var(--blue-color), var(--cold-purple-color) 50%);
     letter-spacing: 4px;
     height: 100vh;
-    min-height: 555px;
+    min-height: 650px;
     width: 100%;
     font-family: "2Dumb",sans-serif;
     box-shadow: inset 0px 0px 20px black;
@@ -90,7 +93,6 @@ body {
     justify-content: flex-start;
     align-items: center;
     text-align: center;
-    font-size: 1.5em;
 }
 .score {
     margin: 0px 0px 5% 0px;
@@ -107,7 +109,7 @@ body {
     justify-content: space-between;
     align-items: center;
     width:80%;
-    font-size: 1em;
+    font-size: 1.5em;
 }
 .replay-btn {
     position: relative;
