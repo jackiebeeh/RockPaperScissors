@@ -44,7 +44,7 @@ function gameTurn(playerChoice) {
             winner = "Player"
         }
         gameResult.textContent = `${winner} wins!`;
-        let replayButton = document.createElement("button");
+        let replayButton = document.createElement("div");
         replayButton.textContent = "Play again!";
         replayButton.className = "replay-btn";
         gameResult.appendChild(replayButton);
