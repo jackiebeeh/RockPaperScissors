@@ -47,7 +47,7 @@ function gameTurn(playerChoice) {
         let replayButton = document.createElement("button");
         replayButton.textContent = "Play again!";
         replayButton.className = "replay-btn";
-        results.appendChild(replayButton);
+        gameResult.appendChild(replayButton);
         replayButton.addEventListener("click", ()=> {
             replayButton.remove();
             console.log(`button clicked`);
